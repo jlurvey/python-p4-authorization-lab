@@ -106,7 +106,6 @@ class MemberOnlyArticle(Resource):
         article = Article.query.filter(Article.id == id, Article.is_member_only == True).first()
         article_json = article.to_dict()
         return article_json, 200
-    
 
 
 api.add_resource(ClearSession, '/clear', endpoint='clear')
